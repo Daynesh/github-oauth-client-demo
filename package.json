@@ -1,0 +1,37 @@
+{
+  "name": "github-oauth-client-demo",
+  "version": "0.0.1",
+  "description": "Web Application demonstrating Github API usage",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower cache clear && ./node_modules/bower/bin/bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-jshint": "~1.9.2",
+    "jshint-stylish": "~1.0.0",
+    "browser-sync": "~2.2.1",
+    "gulp-util": "~3.0.3",
+    "watchify": "~2.4.0",
+    "browserify": "~9.0.3",
+    "brfs": "~1.4.0",
+    "gulp-browserify": "~0.5.1",
+    "gulp-concat": "~2.5.2",
+    "browserify-shim": "~3.8.3",
+    "rimraf": "~2.2.8",
+    "bower": "~1.3.12"
+  },
+  "browser": {
+    "angular": "./bower_components/angular/angular.min.js"
+  },
+  "browserify-shim": {
+    "angular": "angular"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}

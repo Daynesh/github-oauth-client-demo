@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Daynesh's Github API Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CDN-supported assets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    </head>
+    <body ng-app="GithubApiDemoApp" ng-controller="ApiResponsesController">
+        <div class="container">
+            <h3>Github API Requests</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Unauthenticated</th>
+                        <th>Authenticated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="apiResponse in listOfApiResponses">
+                        <td>{{apiResponse.request.description}}</td>
+                        <td>{{apiResponse.response.unauthenticated}}</td>
+                        <td>{{apiResponse.response.authenticated}}</td>
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+
+        <script src="js/bundle.js"></script>
+    </body>
+</html>
