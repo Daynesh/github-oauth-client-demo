@@ -1,0 +1,22 @@
+<div class="container api-responses">
+    <h3>Github API Requests</h3>
+    <table class="table table-striped responses-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Unauthenticated</th>
+                <th>Authenticated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="apiResponse in listOfApiResponses">
+                <td>{{apiResponse.request.description}}</td>
+                <td><code>{{apiResponse.response.unauthenticated}}</code></td>
+                <td><code>{{apiResponse.response.authenticated}}</code></td>
+            </tr>
+        <tbody>
+    </table>
+    <h5>Unauthenticated API requests left: 
+        <span class="remaining-requests">{{requestsRemaining}}</span>
+    </h5>
+</div>

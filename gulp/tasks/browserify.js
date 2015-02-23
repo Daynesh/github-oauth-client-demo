@@ -6,7 +6,7 @@ gulp.task('browserify', ['jshint'], function() {
     gulp.src(['./app/js/app.js'])
         .pipe(browserify({
             insertGlobals: true,
-            debug: false
+            debug: true
         }))
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('build/js'));

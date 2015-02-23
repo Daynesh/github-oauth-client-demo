@@ -1,0 +1,12 @@
+.api-responses {
+    .responses-table {
+        td:not(:first-child) {
+            width: 40%;
+        }
+    }
+
+    .remaining-requests {
+        color: green;
+        font-size: large;
+    }
+}
